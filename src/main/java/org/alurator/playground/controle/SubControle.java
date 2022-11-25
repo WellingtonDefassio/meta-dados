@@ -1,2 +1,4 @@
-package org.alurator.playground.controle;public class SubControle {
+package org.alurator.playground.controle;
+
+public class SubControle extends Controle{
 }

@@ -1,10 +1,10 @@
-package br.com.alura.estoque.controle;
+package org.estoque.api.controle;
+
+import org.estoque.api.dao.ProdutoDaoMock;
+import org.estoque.api.modelo.Produto;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
-import br.com.alura.estoque.dao.ProdutoDaoMock;
-import br.com.alura.estoque.modelo.Produto;
 
 public class ProdutoController {
 	

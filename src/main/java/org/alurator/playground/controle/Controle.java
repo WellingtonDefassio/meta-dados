@@ -1,4 +1,4 @@
-package br.com.alura.alurator.playground.controle;
+package org.alurator.playground.controle;
 
 import java.util.List;
 

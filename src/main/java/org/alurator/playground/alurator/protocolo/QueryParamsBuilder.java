@@ -1,4 +1,4 @@
-package br.com.alura.alurator.protocolo;
+package org.alurator.playground.alurator.protocolo;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package br.com.alura.estoque.modelo;
+package org.estoque.api.modelo;
 
 public class Produto {
 	private String nome;
