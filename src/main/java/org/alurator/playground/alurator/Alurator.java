@@ -1,5 +1,8 @@
 package org.alurator.playground.alurator;
 
+import org.alurator.playground.alurator.protocolo.Request;
+import org.alurator.playground.alurator.reflexao.Reflexao;
+
 public class Alurator {
 
 	private String pacote;
@@ -9,28 +12,18 @@ public class Alurator {
 		this.pacote = pacote;
 	}
 
-	public Object executa(String url) throws Exception {
-		String[] split = ajustaURL(url);
-		String classe = getClassNome(split);
-		Class<?> aClass = Class.forName(pacote +"."+ classe);
-		Object instance = aClass.getConstructor().newInstance();
-
-		return instance;
-	}
+	public Object executa(String url) {
+		String nomeControle = new Request(url).getNomeControle();
 
 
-	private String[] ajustaURL(String url) {
-		String resultado = url;
-		if(url.startsWith("/")){
-			resultado = url.replaceFirst("/", "");
-		}
-		String[] split = resultado.split("/");
+		Object invoca = new Reflexao()
+				.reflete(pacote + "." + nomeControle)
+				.getContrutorPadrao()
+				.invoca();
 
-		return split;
-	}
+		System.out.println(invoca);
+		return invoca;
 
-	private String getClassNome(String[] split) {
-	return split[0].substring(0,1).toUpperCase() + split[0].substring(1) + "Controller";
 	}
 
 }

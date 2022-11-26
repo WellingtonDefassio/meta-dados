@@ -8,7 +8,7 @@ public class TesteInstanciaObjeto {
     public static void main(String[] args) throws Exception {
 
         Class<Controle> controleClass1 = Controle.class;
-        Class<? extends Controle> controleClass2 = new SubControle().getClass();
+//        Class<? extends Controle> controleClass2 = new SubControle().getClass();
         Class<?> controleClass3 = Class.forName("org.alurator.playground.controle.Controle");
 
         Object objetoControle = controleClass3.getDeclaredConstructor().newInstance();
