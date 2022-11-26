@@ -16,4 +16,8 @@ public class Controle {
 	private Controle(String s, String t){}
 
 
+	private void metodoControle1(){
+		System.out.println("Executando metodo private e retorno void parametros vazio metodoControle1()");
+	}
+
 }
