@@ -1,10 +1,16 @@
 package org.estoque.api.modelo;
 
-public class Produto {
+import org.alurator.playground.alurator.anotacao.NomeTagXML;
+
+@NomeTagXML(valor = "product")
+public class Produto extends SuperProduto {
+	@NomeTagXML(valor = "name")
 	private String nome;
+	@NomeTagXML(valor = "value")
 	private double valor;
 	private String marca;
 	public Produto(String nome, double valor, String marca) {
+
 		this.nome = nome;
 		this.valor = valor;
 		this.marca = marca;

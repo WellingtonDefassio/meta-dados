@@ -1,5 +1,6 @@
 package org.estoque.api.controle;
 
+import org.estoque.api.dao.ProdutoDao;
 import org.estoque.api.dao.ProdutoDaoMock;
 import org.estoque.api.modelo.Produto;
 
@@ -8,10 +9,10 @@ import java.util.stream.Collectors;
 
 public class ProdutoController {
 	
-	private ProdutoDaoMock produtoDao;
+	private ProdutoDao produtoDao;
 
-	public ProdutoController() {
-		produtoDao = new ProdutoDaoMock();
+	public ProdutoController(ProdutoDao produtoDao) {
+		this.produtoDao = produtoDao;
 	}
 	
 	public List<Produto> lista() {

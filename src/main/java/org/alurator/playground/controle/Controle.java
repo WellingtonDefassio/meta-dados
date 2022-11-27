@@ -20,4 +20,14 @@ public class Controle {
 		System.out.println("Executando metodo private e retorno void parametros vazio metodoControle1()");
 	}
 
+	public void metodoControle2(String p1) {
+		System.out.println("metodoControle 2 String" + p1);
+	}
+	public void metodoControle2(String p1, String p2) {
+		System.out.println("metodoControle 2 String Strng" + p1+p2);
+	}
+	public void metodoControle2(String p1, Integer p2) {
+		System.out.println("metodoControle 2 String Integer"+p1+p2);
+	}
+
 }

@@ -21,7 +21,6 @@ public class Alurator {
 		Object invocaObject = reflexao.reflete(pacote + "." + nomeControle)
 				.getContrutorPadrao()
 				.invoca();
-
 		Object invocaMethod = reflexao.reflete(pacote + "." + nomeControle).getMethodoPadraoo(nomeMetodo).invoca(invocaObject);
 		Object invoca = reflexao.reflete(pacote + "." + nomeControle).criaInstancia().getMetodo(nomeMetodo).invoca();
 
